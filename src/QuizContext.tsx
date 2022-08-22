@@ -1,28 +1,11 @@
 import React from "react";
 import { UUID } from "uuid-generator-ts";
 
-import { AnswerType, QuizDataType } from "./components/Quiz.types";
-
-type CreateContextValueType = {
-  isQuizStarted: boolean;
-  startQuiz(): void;
-  quizData: QuizDataType[];
-  handleCheckedAnswer(questionId: string, answerId: string): void;
-  isQuizFinished: boolean;
-  setIsQuizFinished: React.Dispatch<React.SetStateAction<boolean>>;
-  getScore(): number;
-  getQuiz(): void;
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  loading: boolean;
-};
-
-type ContextProps = {
-  children: React.ReactNode;
-};
+import { AnswerType, QuizDataType, CreateContextValueType, QuizContextProviderProps } from "./components/Quiz.types";
 
 export const QuizContext = React.createContext({} as CreateContextValueType);
 
-function QuizContextProvider(props: ContextProps) {
+function QuizContextProvider(props: QuizContextProviderProps) {
   const [isQuizStarted, setIsQuizStarted] = React.useState(false);
   const [quizData, setQuizData] = React.useState({} as QuizDataType[]);
   const [isQuizFinished, setIsQuizFinished] = React.useState(false);
