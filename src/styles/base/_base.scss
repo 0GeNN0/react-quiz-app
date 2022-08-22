@@ -25,6 +25,7 @@ button {
   background-color: $button-background-and-border;
   color: $main-background-color-and-button-text;
   transition: 0.15s ease-out;
+  cursor: pointer;
 
   &:active {
     box-shadow: none;
