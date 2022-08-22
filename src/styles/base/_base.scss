@@ -1,0 +1,32 @@
+@import "./font";
+@import "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+button {
+  width: 250px;
+  padding: 25px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Inter";
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 40%);
+  background-color: $button-background-and-border;
+  color: $main-background-color-and-button-text;
+  transition: 0.15s ease-out;
+
+  &:active {
+    box-shadow: none;
+  }
+}

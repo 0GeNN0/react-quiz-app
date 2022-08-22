@@ -1,0 +1,75 @@
+@import "../base/font";
+@import "../base/variables";
+
+.quiz {
+  padding: {
+    inline: 20px;
+    top: 40px;
+  }
+
+  .loading {
+    margin-block: 100px;
+    text-align: center;
+    color: $main-text-color;
+  }
+
+  .action-btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+
+    .score {
+      font-weight: 700;
+      color: $main-text-color;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.question {
+  border-bottom: 1px solid $question-section-bottom-border;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+
+  .question-text {
+    color: $main-text-color;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    user-select: none;
+  }
+
+  .answers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+
+    .answer {
+      padding-inline: 25px;
+      border: 1px solid $button-background-and-border;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &.checked {
+        background-color: $choosen-answer-background;
+        border: none;
+      }
+
+      &.correct {
+        background-color: $correct-answer;
+        border: none;
+      }
+
+      &.not-correct {
+        background-color: $correct-answer;
+        border: none;
+        opacity: .5;
+      }
+
+      &.not-checked {
+        opacity: .5;
+      }
+    }
+  }
+}
